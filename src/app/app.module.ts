@@ -5,18 +5,33 @@ import { HttpModule } from '@angular/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { PostComponent } from './posts/post/post.component';
+import { PostsListComponent } from './posts/posts-list/posts-list.component';
+
+import {PanelModule} from 'primeng/primeng';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
+import {ResourceModule} from "ng2-resource-rest";
+import {DataTableModule,SharedModule} from 'primeng/primeng';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PostComponent,
+    PostsListComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    PanelModule, DataTableModule,SharedModule,
+    ResourceModule.forRoot()
   ],
-  providers: [],
+  providers: [
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

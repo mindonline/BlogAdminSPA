@@ -1,0 +1,17 @@
+<p>
+  Latest post
+</p>
+
+<p-panel header="Title">
+  <p-dataTable [value]="posts">
+    <p-column field="title" header="Title" [sortable]="true"></p-column>
+    <p-column field="tags" header="Tags">
+      <ng-template let-col let-post="rowData" pTemplate="body">
+        <!--
+        <span>{{row | extractProperty:col.field}}</span>
+          <span *ngFor="let tag of post[col.field]" class="badge">{{tag}}</span>
+          -->
+      </ng-template>
+    </p-column>
+  </p-dataTable>
+</p-panel>
